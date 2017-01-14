@@ -2,20 +2,130 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>void32main Blog</title>
-    <link>http://void32main.github.io/feed/index.xml</link>
+    <link>https://void32main.github.io/feed/index.xml</link>
     <description>Recent content on void32main Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 15 Jan 2017 01:07:15 +0800</lastBuildDate>
-    <atom:link href="http://void32main.github.io/feed/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Jan 2017 04:53:08 +0800</lastBuildDate>
+    <atom:link href="https://void32main.github.io/feed/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>破解百度限速</title>
+      <link>https://void32main.github.io/2017-01-15-crack-baiduRateLimit/</link>
+      <pubDate>Sun, 15 Jan 2017 04:53:08 +0800</pubDate>
+      
+      <guid>https://void32main.github.io/2017-01-15-crack-baiduRateLimit/</guid>
+      <description>
+
+&lt;h2 id=&#34;背景介绍&#34;&gt;背景介绍&lt;/h2&gt;
+
+&lt;p&gt;我们今天来讲讲网盘，网盘就是网络硬盘，其实它与硬盘并无太大的区别，只不过是将每个人数据集中存放在一大批硬中，并对外开放一个友好的界面，并通过网络去存储、获取、分享自己的资源。相比于传统的硬盘、U盘等存储设备，需要随身携带，大容量设量可能较笨重，网盘容量一般较大，且只需有网络，可以用大部分设备随时、随处访问，还可以一键分享。所以后来网盘的火爆也不无道理。&lt;/p&gt;
+
+&lt;p&gt;接下来稍微讲几个“概念”：&lt;/p&gt;
+
+&lt;h5 id=&#34;秒传&#34;&gt;秒传&lt;/h5&gt;
+
+&lt;p&gt;Q：我们经常会发现上传文件时只用了一秒就传完了？&lt;/p&gt;
+
+&lt;p&gt;A：电脑中的每个文件都有一个唯一标识符，能唯一标识一个文件。在你上传文件时，服务端会计算出这个文件的唯一标识符与服务器中已有的文件标识符进行比较，如果发现有一个一模一样的标识符，说明这个文件服务器已经有了，不需要上传了，所以会立马返回上传完成。(至于怎么计算出文件的唯一标识符？怎么才能唯一标识一个文件？好学的朋友，可自行Google)&lt;/p&gt;
+
+&lt;h5 id=&#34;t级容量&#34;&gt;T级容量&lt;/h5&gt;
+
+&lt;p&gt;1TB=1024GB，百度云盘提供的是2TB的容量，想想不久前还用的8GB优盘，我竟无语凝噎。&lt;/p&gt;
+
+&lt;p&gt;首先，大家要明白的是2TB只是一个数字而已，并非咱们手中8GB实实在在8GB容量。举个例子，我有100G的空间，我对外宣传的是每个用户拥有50G空间，如果按剧本来的话，我只能服务两个用户，但是我可以换个策略，我将100G空间分给了4个用户，每个用户有20G，我留20G以备个别用户超额之需。虽然每个人都认为自己拥有50G空间，服务商却不用付出那么高的成本。&lt;/p&gt;
+
+&lt;p&gt;其次，用户的20G不等于服务器的20G，张三哥能认为他存了20G的资源，李四也认为他存了20G的资源。但张三、李四刚好都存了一部大片5GB的《大话西游》，上传过程中检测出是同一个文件，服务器只会上传一份，从服务器角度来看，就只存15GB的资源。如果仅从客户角度看，确确实实能存20G的资源，也就很少人会去刨根问底了，其中的玩法还有很多，有兴趣可自行天马行空。&lt;/p&gt;
+
+&lt;h3 id=&#34;百度网盘&#34;&gt;百度网盘&lt;/h3&gt;
+
+&lt;p&gt;网盘虽然火了2年，不过经过去年的洗礼，国内的云盘所剩无几。&lt;/p&gt;
+
+&lt;p&gt;华为网盘：所有用户数据将保留到 2016 年 6 月 30 日，过期将不保留，付费服务将退款。&lt;/p&gt;
+
+&lt;p&gt;腾讯微云：2016 年 5 月 27 日 24:00 分关闭微云「文件中转站」功能。&lt;/p&gt;
+
+&lt;p&gt;新浪微盘：2016 年 6 月 30 日关闭免费个人用户的存储服务，逐步暂停分享及站内搜索服务至整改结束，数据过期不保留。&lt;/p&gt;
+
+&lt;p&gt;迅雷/金山快盘：停止快盘个人用户的存储服务，所有用户数据将保留到 2016 年 6 月 30 日，过期不保留。&lt;/p&gt;
+
+&lt;p&gt;360网盘：360云盘决定停止个人云盘服务，在网盘存储、传播内容的合法性和安全性得到彻底解决之前不再考虑恢复，之后转型企业云服务。&lt;/p&gt;
+
+&lt;p&gt;现在比较好用的也只有百度网盘了，然而它也不争气，为推广会员和高级会员，强行将普通用户的下载速度拉到200k以下(半年前的数据，不知现在如何)。今天就要介绍两款软件，配合使用能够让大家从百度云盘下载资源达到满速。&lt;/p&gt;
+
+&lt;h3 id=&#34;破解限速&#34;&gt;破解限速&lt;/h3&gt;
+
+&lt;p&gt;今天只介绍Mac系统下软件的安装，但我个人没有PC机，就不做演示了，但会给出其他人Win版教程的地址，使用WIN的朋友可以参照实施。&lt;/p&gt;
+
+&lt;h5 id=&#34;下载&#34;&gt;下载&lt;/h5&gt;
+
+&lt;p&gt;aria2gui&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/yangshun1029/aria2gui&#34;&gt;项目主页&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/yangshun1029/aria2gui/releases/download/1.3.5/Aria2GUI-v1.3.5.zip&#34;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;BaiduExporter&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/acgotaku/BaiduExporter&#34;&gt;项目主页&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/acgotaku/BaiduExporter/archive/master.zip&#34;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;安装&#34;&gt;安装&lt;/h5&gt;
+
+&lt;p&gt;aria2gui安装比较简单，只要解压下载好的文件。将解压出来的&lt;code&gt;Aria2GUI.app&lt;/code&gt;程序拉到Mac的应用(Application)文件夹中即可，如下图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ojs3utley.bkt.clouddn.com/2017011589975install_aria2gui.jpg&#34; alt=&#34;2017011589975install_aria2gui.jpg&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;BaiduExporter是Chrome的插件，由于开发者现在已经不维护了，所以在官方store里找不到，也没有打包，必须自己手动安装。&lt;/p&gt;
+
+&lt;p&gt;第一步：解压下载下来的BaiduExporter.zip文件&lt;/p&gt;
+
+&lt;p&gt;第二步：打开Chrome的扩展中心&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ojs3utley.bkt.clouddn.com/2017011552076install_baiduexporter_1.jpg&#34; alt=&#34;2017011552076install_baiduexporter_1.jpg&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;第三步：勾选开发者模式，载入未打包的插件&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ojs3utley.bkt.clouddn.com/2017011590999install_baiduexporter_2.jpg&#34; alt=&#34;2017011590999install_baiduexporter_2.jpg&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;第四步：找到之前解压的文件，打开名为chrome 文件夹&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ojs3utley.bkt.clouddn.com/2017011577763install_baiduexporter_3.jpg&#34; alt=&#34;2017011577763install_baiduexporter_3.jpg&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;第五步：启用插件&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ojs3utley.bkt.clouddn.com/2017011517893install_baiduexporter_4.jpg&#34; alt=&#34;2017011517893install_baiduexporter_4.jpg&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;第六步：打开aria2gui软件&lt;/p&gt;
+
+&lt;p&gt;第七步：找开百度云盘网页，勾选一个资源，点击导出下载-ARIA2 RPC&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ojs3utley.bkt.clouddn.com/2017011599963install_baiduexporter_5.jpg&#34; alt=&#34;2017011599963install_baiduexporter_5.jpg&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;第八步：下载开始&lt;/p&gt;
+
+&lt;p&gt;aria2gui下载速度&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ojs3utley.bkt.clouddn.com/2017011576835install_baiduexporter_6.png&#34; alt=&#34;2017011576835install_baiduexporter_6.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;chrome下载速度&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ojs3utley.bkt.clouddn.com/2017011526229install_baiduexporter_7.png&#34; alt=&#34;2017011526229install_baiduexporter_7.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;WIN版教程：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://moflying.com/2016/06/05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8aria2%E5%8F%8Awebui-aria2%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E4%BA%91%E8%B5%84%E6%BA%90/&#34;&gt;如何使用aria2及webui-aria2下载百度云资源&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title></title>
-      <link>http://void32main.github.io/about/</link>
+      <link>https://void32main.github.io/about/</link>
       <pubDate>Sun, 15 Jan 2017 01:07:15 +0800</pubDate>
       
-      <guid>http://void32main.github.io/about/</guid>
+      <guid>https://void32main.github.io/about/</guid>
       <description></description>
     </item>
     
