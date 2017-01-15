@@ -10,16 +10,104 @@
     <atom:link href="https://void32main.github.io/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/feed/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>破解百度限速</title>
-      <link>https://void32main.github.io/2017-01-15-crack-baiduRateLimit/</link>
-      <pubDate>Sun, 15 Jan 2017 04:53:08 +0800</pubDate>
+      <title>shadowsocks简明教程</title>
+      <link>https://void32main.github.io/post/2017/2017-01-15-shadowsocksIntro/</link>
+      <pubDate>Sun, 15 Jan 2017 13:08:08 +0800</pubDate>
       
-      <guid>https://void32main.github.io/2017-01-15-crack-baiduRateLimit/</guid>
+      <guid>https://void32main.github.io/post/2017/2017-01-15-shadowsocksIntro/</guid>
       <description>
 
-&lt;h2 id=&#34;背景介绍&#34;&gt;背景介绍&lt;/h2&gt;
+&lt;h3 id=&#34;背景介绍&#34;&gt;背景介绍&lt;/h3&gt;
 
-&lt;p&gt;我们今天来讲讲网盘，网盘就是网络硬盘，其实它与硬盘并无太大的区别，只不过是将每个人数据集中存放在一大批硬中，并对外开放一个友好的界面，并通过网络去存储、获取、分享自己的资源。相比于传统的硬盘、U盘等存储设备，需要随身携带，大容量设量可能较笨重，网盘容量一般较大，且只需有网络，可以用大部分设备随时、随处访问，还可以一键分享。所以后来网盘的火爆也不无道理。&lt;/p&gt;
+&lt;p&gt;Shadowsocks （中文名稱：影梭），它的作用是番羽土啬。什么？你没见过这个词，出门左转百度。&lt;/p&gt;
+
+&lt;p&gt;特点：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;加密通信&lt;/li&gt;
+&lt;li&gt;速度快&lt;/li&gt;
+&lt;li&gt;客户端覆盖多个主流操作系统和平台&lt;/li&gt;
+&lt;li&gt;智能分流，简单来讲就是只有国外网站才走代理，减少带宽浪费，保证国内网站访问速度。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;我作为开发者，浏览国外网站的需求还挺大。用百度搜索技术资料的结果很难令人满意，国外开发者会议或大牛的tutorial一般都会放在油管。Github又是最大的开源仓库，等等。但是国内访问这些网站，要么根本访问不了，要么速度慢到令人抓狂。每个人的需求不一样，但可能都或多或少有这样的需求。&lt;/p&gt;
+
+&lt;h3 id=&#34;下载&#34;&gt;下载&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://shadowsocks.org/en/download/clients.html&#34;&gt;下载页面&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;下面这个web有全平台的软件，打开根据需求下载。我选择的是&lt;code&gt;ShadowsocksX-NG&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+
+&lt;p&gt;这里只介绍Mac平台的安装，Win平台大同小异，可参照实践。移动端只要找到合适的软件，安装完，设置方法是一致，这里就不重复介绍。&lt;/p&gt;
+
+&lt;p&gt;第一步：安装软件&lt;/p&gt;
+
+&lt;p&gt;解压下载下来的&lt;code&gt;ShadowsocksX-NG-1.3.2.zip&lt;/code&gt; 文件，并将解压出来的&lt;code&gt;ShadowsocksX-NG.app&lt;/code&gt;放在应用(Application)文件夹中。&lt;/p&gt;
+
+&lt;p&gt;第二步：打开软件&lt;/p&gt;
+
+&lt;p&gt;如果弹出需要权限的提示，允许即可。可能还需要输入管理员密码，输入即可。&lt;/p&gt;
+
+&lt;p&gt;第三步：添另SS账号&lt;/p&gt;
+
+&lt;p&gt;在Mac桌面顶部菜单栏有个&lt;code&gt;纸飞机&lt;/code&gt;的图标，依次点开服务-服务器设置，添击添加。输入如下信息：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;服务器：111.111.111&lt;/li&gt;
+&lt;li&gt;远程端口：1111&lt;/li&gt;
+&lt;li&gt;随机密码：1111&lt;/li&gt;
+&lt;li&gt;加密方式:aes-256-cfb&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(这是随便写的测试信息，下文会讲到如何获取这些信息。)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ojs3utley.bkt.clouddn.com/2017011597042ss_install_1.jpg&#34; alt=&#34;2017011597042ss_install_1.jpg&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ojs3utley.bkt.clouddn.com/2017011588923ss_install_2.jpg&#34; alt=&#34;2017011588923ss_install_2.jpg&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;第四步：检查服务状态是启动&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Shadowsocks:ON&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Auto Mode By PAC&lt;/code&gt;勾选，&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这里就是前面说的智能分流，软件内部维护了一个列表，里面列出了国内不能访问的网点，只有这些网站才需要走代理，减少带宽浪费，保证国内网站访问速度。隔一段时间，还可以更新下这个列表，点击&lt;code&gt;Update PAC from GFW List&lt;/code&gt;即可。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ojs3utley.bkt.clouddn.com/2017011515027ss_install_3.jpg&#34; alt=&#34;2017011515027ss_install_3.jpg&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;其它&#34;&gt;其它&lt;/h4&gt;
+
+&lt;p&gt;如何快速添加SS账号&lt;/p&gt;
+
+&lt;p&gt;网上无论是免费的SS账号，还是收费的SS账号，一般都会人性化的提供一个二维码，配合程序中从二维码读取配置的功能，可快速添加账号，具体如下图。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ojs3utley.bkt.clouddn.com/2017011544707ss_install_4.jpg&#34; alt=&#34;2017011544707ss_install_4.jpg&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如何获取免费的SS账号&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.ishadowsocks.me/&#34;&gt;免费账号&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;PS：这个网站提供的是共用的ss账号，支持二维码快速配置，每6个小时更换一次密码，大家隔一段时间需要更新配置。&lt;/p&gt;
+
+&lt;p&gt;接下来，大家就可以愉快的上网了。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>破解百度限速</title>
+      <link>https://void32main.github.io/post/2017/2017-01-15-crack-baiduRateLimit/</link>
+      <pubDate>Sun, 15 Jan 2017 04:53:08 +0800</pubDate>
+      
+      <guid>https://void32main.github.io/post/2017/2017-01-15-crack-baiduRateLimit/</guid>
+      <description>
+
+&lt;h3 id=&#34;背景介绍&#34;&gt;背景介绍&lt;/h3&gt;
+
+&lt;p&gt;网盘这两年挺火的，网盘顾名思义就是网络硬盘，其实它与硬盘并无太大的区别，只不过是将每个人数据集中存放在一大批硬中，并对外开放一个友好的界面，并通过网络去存储、获取、分享自己的资源。相比于传统的硬盘、U盘等存储设备，需要随身携带，大容量设量可能较笨重，网盘容量一般较大，且只需有网络，可以用大部分设备随时、随处访问，还可以一键分享。所以后来网盘的火爆也不无道理。&lt;/p&gt;
 
 &lt;p&gt;接下来稍微讲几个“概念”：&lt;/p&gt;
 
@@ -57,7 +145,7 @@
 
 &lt;p&gt;今天只介绍Mac系统下软件的安装，但我个人没有PC机，就不做演示了，但会给出其他人Win版教程的地址，使用WIN的朋友可以参照实施。&lt;/p&gt;
 
-&lt;h5 id=&#34;下载&#34;&gt;下载&lt;/h5&gt;
+&lt;h4 id=&#34;下载&#34;&gt;下载&lt;/h4&gt;
 
 &lt;p&gt;aria2gui&lt;/p&gt;
 
@@ -71,13 +159,17 @@
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/acgotaku/BaiduExporter/archive/master.zip&#34;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;安装&#34;&gt;安装&lt;/h5&gt;
+&lt;h4 id=&#34;安装&#34;&gt;安装&lt;/h4&gt;
 
-&lt;p&gt;aria2gui安装比较简单，只要解压下载好的文件。将解压出来的&lt;code&gt;Aria2GUI.app&lt;/code&gt;程序拉到Mac的应用(Application)文件夹中即可，如下图：&lt;/p&gt;
+&lt;h5 id=&#34;安装aria2gui&#34;&gt;安装aria2gui&lt;/h5&gt;
+
+&lt;p&gt;aria2gui安装比较简单，只要解压下载好的&lt;code&gt;Aria2GUI-v1.3.4.zip&lt;/code&gt;文件。将解压出来的&lt;code&gt;Aria2GUI.app&lt;/code&gt;程序拉到Mac的应用(Application)文件夹中即可，如下图：&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://ojs3utley.bkt.clouddn.com/2017011589975install_aria2gui.jpg&#34; alt=&#34;2017011589975install_aria2gui.jpg&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;BaiduExporter是Chrome的插件，由于开发者现在已经不维护了，所以在官方store里找不到，也没有打包，必须自己手动安装。&lt;/p&gt;
+
+&lt;h5 id=&#34;安装baiduexporter&#34;&gt;安装BaiduExporter&lt;/h5&gt;
 
 &lt;p&gt;第一步：解压下载下来的BaiduExporter.zip文件&lt;/p&gt;
 
@@ -103,7 +195,7 @@
 
 &lt;p&gt;&lt;img src=&#34;http://ojs3utley.bkt.clouddn.com/2017011599963install_baiduexporter_5.jpg&#34; alt=&#34;2017011599963install_baiduexporter_5.jpg&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;第八步：下载开始&lt;/p&gt;
+&lt;p&gt;第八步：下载速度对比&lt;/p&gt;
 
 &lt;p&gt;aria2gui下载速度&lt;/p&gt;
 

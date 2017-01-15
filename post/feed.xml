@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>void32main Blog</title>
-    <link>https://void32main.github.io/feed/index.xml</link>
-    <description>Recent content on void32main Blog</description>
+    <title>Posts on void32main Blog</title>
+    <link>https://void32main.github.io/post/feed/index.xml</link>
+    <description>Recent content in Posts on void32main Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Copyright (c) 2015. All rights reserved.</copyright>
     <lastBuildDate>Sun, 15 Jan 2017 13:08:08 +0800</lastBuildDate>
-    <atom:link href="https://void32main.github.io/feed/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://void32main.github.io/post/feed/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>shadowsocks简明教程</title>
@@ -210,15 +210,6 @@
 
 &lt;p&gt;&lt;a href=&#34;http://moflying.com/2016/06/05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8aria2%E5%8F%8Awebui-aria2%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E4%BA%91%E8%B5%84%E6%BA%90/&#34;&gt;如何使用aria2及webui-aria2下载百度云资源&lt;/a&gt;&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://void32main.github.io/about/</link>
-      <pubDate>Sun, 15 Jan 2017 01:07:15 +0800</pubDate>
-      
-      <guid>https://void32main.github.io/about/</guid>
-      <description></description>
     </item>
     
   </channel>
